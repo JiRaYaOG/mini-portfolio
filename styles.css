@@ -76,6 +76,16 @@ body {
   100% { clip: rect(0,900px,0,0); transform: translate(0,0);}
 }
 
+/* Placement classique */
+header {
+  margin-top: 60px;    /* espace entre le haut et le titre */
+  margin-bottom: 40px; /* espace entre le titre et les projets */
+}
+
+main {
+  margin-bottom: 60px; /* espace avant le footer */
+}
+
 /* Section projets */
 .projects {
   display: flex;
