@@ -7,11 +7,11 @@ Ce projet met en avant mes **projets et compétences** avec un style **cyberpunk
 
 ## ✨ Fonctionnalités principales
 
-- 🌈 **Background animé** : gradient fluide et dynamique façon cyberpunk.  
-- 💡 **Cartes projets interactives** : effet hover lumineux et scaling.  
-- 🔥 **Titres néon pulsants** : style futuriste pour chaque section.  
-- 📱 **Responsive design** : compatible mobile, tablette et desktop.  
-- 🔗 **Lien GitHub** : bouton stylé pour retrouver mes autres projets.  
+- 🌈 **Background animé** : Un dégradé fluide et dynamique inspiré du style cyberpunk.
+- 💡 **Cartes projets interactives** : Effet lumineux au survol avec mise en valeur des projets.
+- 🔥 **Titres néon pulsants** : Texte animé pour une ambiance futuriste.
+- 📱 **Responsive design** : Adaptation automatique à toutes les tailles d'écran.
+- 🔗 **Lien GitHub** : Accès direct à mes autres projets via un bouton stylé. 
 
 ---
 
@@ -25,6 +25,7 @@ Ce projet met en avant mes **projets et compétences** avec un style **cyberpunk
 
 ## 🚀 Comment voir le projet
 
-1. Cloner le repo :  
-```bash
-git clone https://github.com/JiRaYaOG/mini-portfolio.git
+1. Clonez le repository :
+   ```bash
+   git clone https://github.com/JiRaYaOG/mini-portfolio.git
+
