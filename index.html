@@ -1,49 +1,128 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Portfolio Cyberpunk</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* Body et fond noir */
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+}
 
-  <!-- Canvas pour les particules -->
-  <canvas id="bg-canvas"></canvas>
+/* Canvas full-screen */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
-  <header>
-    <h1 class="neon-title" data-text="🌌 Mini Portfolio Cyberpunk">🌌 Mini Portfolio Cyberpunk</h1>
-    <p class="neon-subtitle">Présentation de mes projets et compétences</p>
-  </header>
+/* Titres néon glitch */
+.neon-title, .neon-subtitle {
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+}
 
-  <main>
-    <section class="projects">
-      <div class="card">
-        <a href="https://jirayaog.github.io/projet1/" target="_blank">
-          <img src="images/projet1.png" alt="Projet 1">
-          <p>💻 Projet 1</p>
-        </a>
-      </div>
-      <div class="card">
-        <a href="https://jirayaog.github.io/projet2/" target="_blank">
-          <img src="images/projet2.png" alt="Projet 2">
-          <p>🎨 Projet 2</p>
-        </a>
-      </div>
-      <div class="card">
-        <a href="https://jirayaog.github.io/projet3/" target="_blank">
-          <img src="images/projet3.png" alt="Projet 3">
-          <p>🚀 Projet 3</p>
-        </a>
-      </div>
-    </section>
-  </main>
+.neon-title {
+  font-size: 3em;
+  font-weight: 700;
+  position: relative;
+  animation: flicker 2s infinite alternate;
+}
 
-  <footer>
-    © 2025 JiRaYaOG – Tous droits réservés
-  </footer>
+.neon-title::before,
+.neon-title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.neon-title::before {
+  animation: glitchTop 1s infinite linear alternate-reverse;
+  color: #f0f;
+}
+
+.neon-title::after {
+  animation: glitchBottom 1s infinite linear alternate-reverse;
+  color: #0ff;
+}
+
+@keyframes flicker {
+  0%, 100% { text-shadow: 0 0 5px #0ff,0 0 10px #0ff,0 0 20px #0ff,0 0 40px #0ff; }
+  50% { text-shadow: 0 0 10px #0ff,0 0 20px #0ff,0 0 30px #0ff,0 0 60px #0ff; }
+}
+
+@keyframes glitchTop {
+  0% { clip: rect(0, 900px, 0, 0); transform: translate(-3px,-3px);}
+  20% { clip: rect(0, 900px, 20px, 0); transform: translate(3px,3px);}
+  40% { clip: rect(10px,900px,30px,0); transform: translate(-2px,-2px);}
+  60% { clip: rect(20px,900px,40px,0); transform: translate(2px,2px);}
+  80% { clip: rect(30px,900px,50px,0); transform: translate(-1px,-1px);}
+  100% { clip: rect(0,900px,0,0); transform: translate(0,0);}
+}
+
+@keyframes glitchBottom {
+  0% { clip: rect(0,900px,0,0); transform: translate(3px,3px);}
+  20% { clip: rect(10px,900px,30px,0); transform: translate(-3px,-3px);}
+  40% { clip: rect(20px,900px,40px,0); transform: translate(2px,2px);}
+  60% { clip: rect(30px,900px,50px,0); transform: translate(-2px,-2px);}
+  80% { clip: rect(10px,900px,30px,0); transform: translate(1px,1px);}
+  100% { clip: rect(0,900px,0,0); transform: translate(0,0);}
+}
+
+/* Section projets */
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+/* Cartes de projets */
+.card {
+  background: rgba(0,255,255,0.1);
+  margin: 15px;
+  padding: 15px;
+  border-radius: 20px;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  animation: pulse 3s infinite alternate;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px #0ff,0 0 50px #0ff;
+  filter: brightness(1.3);
+}
+
+.card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Pulse léger sur les cartes */
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px #0ff; }
+  50% { box-shadow: 0 0 15px #0ff; }
+  100% { box-shadow: 0 0 5px #0ff; }
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: rgba(0,0,0,0.2);
+}
