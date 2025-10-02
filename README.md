@@ -1,4 +1,4 @@
-# 🌌 Mini Portfolio Futuriste 🚀
+# 🌌 Mini Portfolio Futuriste 
 
 Bienvenue dans mon **Mini Portfolio Futuriste** !  
 Ce projet met en avant mes **projets et compétences** avec un style **cyberpunk / néon**, tout en s’entraînant sur **HTML, CSS et animations avancées**.  
