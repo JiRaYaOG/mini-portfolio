@@ -26,6 +26,6 @@ Ce projet met en avant mes **projets et compétences** avec un style **cyberpunk
 
 ## 🚀 Comment voir le projet
 
-1. Clonez le repository :  
+1. Cloner le repository :  
 ```bash
 git clone https://github.com/JiRaYaOG/mini-portfolio.git
