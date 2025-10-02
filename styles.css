@@ -22,11 +22,7 @@ body {
 
 /* Titres néon glitch */
 .neon-title, .neon-subtitle {
-  text-shadow:
-    0 0 5px #0ff,
-    0 0 10px #0ff,
-    0 0 20px #0ff,
-    0 0 40px #0ff;
+  text-shadow: 0 0 5px #0ff,0 0 10px #0ff,0 0 20px #0ff,0 0 40px #0ff;
 }
 
 .neon-title {
@@ -36,48 +32,6 @@ body {
   animation: flicker 2s infinite alternate;
 }
 
-.neon-title::before,
-.neon-title::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  width: 100%;
-}
-
-.neon-title::before {
-  animation: glitchTop 1s infinite linear alternate-reverse;
-  color: #f0f;
-}
-
-.neon-title::after {
-  animation: glitchBottom 1s infinite linear alternate-reverse;
-  color: #0ff;
-}
-
-@keyframes flicker {
-  0%, 100% { text-shadow: 0 0 5px #0ff,0 0 10px #0ff,0 0 20px #0ff,0 0 40px #0ff; }
-  50% { text-shadow: 0 0 10px #0ff,0 0 20px #0ff,0 0 30px #0ff,0 0 60px #0ff; }
-}
-
-@keyframes glitchTop {
-  0% { clip: rect(0, 900px, 0, 0); transform: translate(-3px,-3px);}
-  20% { clip: rect(0, 900px, 20px, 0); transform: translate(3px,3px);}
-  40% { clip: rect(10px,900px,30px,0); transform: translate(-2px,-2px);}
-  60% { clip: rect(20px,900px,40px,0); transform: translate(2px,2px);}
-  80% { clip: rect(30px,900px,50px,0); transform: translate(-1px,-1px);}
-  100% { clip: rect(0,900px,0,0); transform: translate(0,0);}
-}
-
-@keyframes glitchBottom {
-  0% { clip: rect(0,900px,0,0); transform: translate(3px,3px);}
-  20% { clip: rect(10px,900px,30px,0); transform: translate(-3px,-3px);}
-  40% { clip: rect(20px,900px,40px,0); transform: translate(2px,2px);}
-  60% { clip: rect(30px,900px,50px,0); transform: translate(-2px,-2px);}
-  80% { clip: rect(10px,900px,30px,0); transform: translate(1px,1px);}
-  100% { clip: rect(0,900px,0,0); transform: translate(0,0);}
-}
-
-/* Placement classique */
 header {
   margin-top: 60px;
   margin-bottom: 40px;
@@ -112,11 +66,6 @@ main {
   transform: scale(1.15);
   box-shadow: 0 0 25px #0ff,0 0 50px #0ff;
   filter: brightness(1.3);
-}
-
-.card a {
-  color: inherit;
-  text-decoration: none;
 }
 
 /* Pulse léger sur les cartes */
